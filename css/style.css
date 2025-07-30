@@ -15,8 +15,10 @@ header {
     background-color: #8FB8ED;
     padding: 1rem;
     box-shadow: 3px 3px 5px rgba(53, 52, 52, 0);
-
-
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 20vh;
 }
 
 #Logo {
@@ -27,6 +29,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     min-width: 80vw;
+    padding: 0;
+    margin: 0;
 }
 
 .menu>li {
@@ -35,6 +39,56 @@ header {
 
 .menu>li>a {
     text-decoration: none;
-    color: black;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0);
+    color: beige;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+.background {
+    background-image: url(../images/girafas.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.mainAnimals {
+    background-color: rgb(253, 246, 182);
+}
+
+main>h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 4rem;
+    background-color: rgb(185, 245, 215);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+
+
+.sectionAnimals {
+    margin: 2rem auto;
+    width: 80%;
+    text-align: center;
+}
+
+
+/* Accordion */
+
+.accordion {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+/* Carousel */
+
+#carouselExample.animais {
+    width: 60%;
+    margin: auto;
+    height: 60vh;
+}
+
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
 }
