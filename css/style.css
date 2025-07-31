@@ -89,8 +89,14 @@ main>h1 {
 }
 
 .carousel-item img {
-    height: 60vh;
-    object-fit: cover;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
 }
 
 /* Cards */
