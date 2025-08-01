@@ -53,6 +53,7 @@ header {
 
 .mainAnimals {
     background-color: rgb(253, 246, 182);
+    padding-bottom: 4rem;
 }
 
 main>h1 {
@@ -64,14 +65,15 @@ main>h1 {
     border-bottom-right-radius: 50%;
 }
 
-
-
 .sectionAnimals {
     margin: 2rem auto;
     width: 80%;
     text-align: center;
 }
 
+section>h2 {
+    margin: 2rem auto;
+}
 
 /* Accordion */
 
@@ -89,7 +91,7 @@ main>h1 {
 }
 
 .carousel-item img {
-    height: 100vh;
+    height: 60vh;
     object-fit: contain;
 }
 
@@ -116,6 +118,7 @@ main>h1 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     width: 30%;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -144,4 +147,89 @@ main>h1 {
 .card-text {
     font-size: 1em;
     color: #666;
+}
+
+/* Estilo base */
+.menu {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu>li {
+    list-style-type: none;
+}
+
+.menu>li>a {
+    text-decoration: none;
+    color: beige;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/* Botão hambúrguer escondido por padrão */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Container do menu em telas pequenas */
+.menu-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Responsivo */
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 101;
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #8FB8ED;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 5rem;
+        transition: left 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .menu li {
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .menu-container.active {
+        left: 0;
+    }
+
+    #carouselExample.animais {
+        height: 40vh;
+    }
+
+    .carousel-item img {
+        height: 40vh;
+    }
+
+    main>h1 {
+        font-size: 2.5rem;
+    }
 }
